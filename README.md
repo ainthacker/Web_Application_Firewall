@@ -57,10 +57,7 @@ A lightweight and robust Web Application Firewall (WAF) designed to protect your
 
 ---
 
-## 📸 Screenshot
-> **Note:** You can add a screenshot of the UI and attack logs here.
 
----
 
 ## 📬 Contribution & Contact
 Contributions and feedback are welcome! Please open an issue or submit a pull request if you have suggestions or improvements.
