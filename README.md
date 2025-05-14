@@ -1,41 +1,41 @@
 # 🚀 Web Application Firewall (WAF)
 
-Web Application Firewall (WAF), web uygulamalarınızı yaygın saldırılara karşı korumak için geliştirilmiş hafif ve güçlü bir güvenlik çözümüdür. Bu proje, 24 saatlik bir Hackathon etkinliğinde sıfırdan geliştirilmiştir.
+A lightweight and robust Web Application Firewall (WAF) designed to protect your web applications from common attacks. Developed from scratch in just 24 hours during a Hackathon event.
 
 ---
 
-## 🛡️ Özellikler
-- SQL Injection tespiti ve engelleme
-- XSS (Cross-Site Scripting) saldırı tespiti
-- Basit DoS koruması (istek limiti)
-- Saldırı kayıtlarının veritabanında tutulması
-- Kullanıcı girişi ve oturum yönetimi
-- Modern ve sade arayüz
+## 🛡️ Features
+- SQL Injection detection and prevention
+- XSS (Cross-Site Scripting) attack detection
+- Simple DoS protection (request rate limiting)
+- Attack logging in a local database
+- User authentication and session management
+- Clean and modern user interface
 
 ---
 
-## ⚙️ Kurulum
+## ⚙️ Installation
 
-1. **Python Sanal Ortamı Oluşturun**
+1. **Create a Python Virtual Environment**
     ```bash
     python -m venv venv
-    source venv/bin/activate  # (Windows için: venv\Scripts\activate)
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
     ```
-2. **Gerekli Paketleri Yükleyin**
+2. **Install Required Packages**
     ```bash
     pip install -r requirements.txt
     ```
-3. **Sunucuyu Başlatın**
+3. **Start the Server**
     ```bash
     python Server.py
     ```
-    Sunucu varsayılan olarak [http://localhost:5000](http://localhost:5000) adresinde çalışır.
+    The server will run by default at [http://localhost:5000](http://localhost:5000)
 
 ---
 
-## 🗄️ Veritabanı Kontrolü
-- Veritabanı: `waf.db` (SQLite)
-- Saldırı kayıtlarını görmek için:
+## 🗄️ Database
+- Database: `waf.db` (SQLite)
+- To view attack logs:
     ```bash
     sqlite3 waf.db
     SELECT * FROM attacks;
@@ -43,24 +43,24 @@ Web Application Firewall (WAF), web uygulamalarınızı yaygın saldırılara ka
 
 ---
 
-## 📁 Proje Yapısı
+## 📁 Project Structure
 ```
-├── Server.py           # Ana sunucu ve uygulama dosyası
-├── AttackTest.py       # Saldırı tespit ve loglama
-├── SQLi.py             # SQL Injection tespiti
-├── XSS.py              # XSS tespiti
-├── DOS.py              # DoS koruması
-├── requirements.txt    # Gerekli Python paketleri
-├── Templates/          # HTML şablonları
-└── README.md           # Proje dokümantasyonu
+├── Server.py           # Main server and application logic
+├── AttackTest.py       # Attack detection and logging
+├── SQLi.py             # SQL Injection detection
+├── XSS.py              # XSS detection
+├── DOS.py              # DoS protection
+├── requirements.txt    # Python dependencies
+├── Templates/          # HTML templates
+└── README.md           # Project documentation
 ```
 
 ---
 
-## 📸 Ekran Görüntüsü
-> **Not:** Arayüz ve saldırı kayıtları için ekran görüntüsü ekleyebilirsiniz.
+## 📸 Screenshot
+> **Note:** You can add a screenshot of the UI and attack logs here.
 
 ---
 
-## 📬 Katkı ve İletişim
-Her türlü katkı ve geri bildirime açıktır. Lütfen issue veya pull request açmaktan çekinmeyin!
+## 📬 Contribution & Contact
+Contributions and feedback are welcome! Please open an issue or submit a pull request if you have suggestions or improvements.
