@@ -1,19 +1,66 @@
-# Web Application Firewall 
-This is a lightweight and robust Web Application Firewall (WAF) developed from scratch in just 24 hours during the Hackathon event. This project aims to enhance web application security by providing a simple yet effective defense mechanism against common web attacks.
-## Setting Up
-1. Set up a virtual environment for python
-    * Linux
-        * sudo pip3 install virtualenv 
-        * virtualenv venv
-        * source ./venv/bin/activate - to activate the virtual environment
-        * deactivate - you can use this to deactivate Venv when it is no longer required
-2. Install all required dependencies after the activation of the virtual environment
-    * pip3 install -r requirements.txt - Linux 
-*Reference: https://note.nkmk.me/en/python-pip-install-requirements/* 
-3. Start the server 
-    * python3 server.py - Linux
-    The server by default runs on the http://localhost:5000
+# 🚀 Web Application Firewall (WAF)
 
-## Checking Database
-* sqlite3 waf.db
-* SELECT * FROM attacks
+Web Application Firewall (WAF), web uygulamalarınızı yaygın saldırılara karşı korumak için geliştirilmiş hafif ve güçlü bir güvenlik çözümüdür. Bu proje, 24 saatlik bir Hackathon etkinliğinde sıfırdan geliştirilmiştir.
+
+---
+
+## 🛡️ Özellikler
+- SQL Injection tespiti ve engelleme
+- XSS (Cross-Site Scripting) saldırı tespiti
+- Basit DoS koruması (istek limiti)
+- Saldırı kayıtlarının veritabanında tutulması
+- Kullanıcı girişi ve oturum yönetimi
+- Modern ve sade arayüz
+
+---
+
+## ⚙️ Kurulum
+
+1. **Python Sanal Ortamı Oluşturun**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # (Windows için: venv\Scripts\activate)
+    ```
+2. **Gerekli Paketleri Yükleyin**
+    ```bash
+    pip install -r requirements.txt
+    ```
+3. **Sunucuyu Başlatın**
+    ```bash
+    python Server.py
+    ```
+    Sunucu varsayılan olarak [http://localhost:5000](http://localhost:5000) adresinde çalışır.
+
+---
+
+## 🗄️ Veritabanı Kontrolü
+- Veritabanı: `waf.db` (SQLite)
+- Saldırı kayıtlarını görmek için:
+    ```bash
+    sqlite3 waf.db
+    SELECT * FROM attacks;
+    ```
+
+---
+
+## 📁 Proje Yapısı
+```
+├── Server.py           # Ana sunucu ve uygulama dosyası
+├── AttackTest.py       # Saldırı tespit ve loglama
+├── SQLi.py             # SQL Injection tespiti
+├── XSS.py              # XSS tespiti
+├── DOS.py              # DoS koruması
+├── requirements.txt    # Gerekli Python paketleri
+├── Templates/          # HTML şablonları
+└── README.md           # Proje dokümantasyonu
+```
+
+---
+
+## 📸 Ekran Görüntüsü
+> **Not:** Arayüz ve saldırı kayıtları için ekran görüntüsü ekleyebilirsiniz.
+
+---
+
+## 📬 Katkı ve İletişim
+Her türlü katkı ve geri bildirime açıktır. Lütfen issue veya pull request açmaktan çekinmeyin!
