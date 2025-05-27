@@ -2,6 +2,9 @@
 
 A lightweight and robust Web Application Firewall (WAF) designed to protect your web applications from common attacks. Developed from scratch in just 24 hours during a Hackathon event.
 
+![Uploading image.png…]()
+
+
 ---
 
 ## 🛡️ Features
